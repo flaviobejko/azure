@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: flaviobejkoazure 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flaviobejkoazure 
+    spec:
+      containers:
+        - name: flaviobejkoazure 
+          image: mycontainerregistryflav.azurecr.io/flaviobejkoazure
+          ports:
+          - containerPort: 8080
